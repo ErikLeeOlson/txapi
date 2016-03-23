@@ -1,0 +1,14 @@
+CREATE TABLE `tx_main` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`flag` INT(11) NULL DEFAULT NULL,
+	`ref_prev` INT(11) NULL DEFAULT NULL,
+	`ref_next` INT(11) NULL DEFAULT NULL,
+	`type` INT(11) NULL DEFAULT NULL,
+	`data` LONGTEXT NULL,
+	PRIMARY KEY (`id`),
+	INDEX `timestamp` (`timestamp`, `flag`, `type`)
+)
+ENGINE=InnoDB
+;
+  
